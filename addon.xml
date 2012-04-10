@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.hifplay"
+       name="HIF play"
+       version="0.0.1"
+       provider-name="Daniel">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+    <import addon="script.module.beautifulsoup"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>HIF play</summary>
+    <description>Watch HIF play</description>
+    <description lang="sv">Titta på HIF play</description>
+    <disclaimer></disclaimer>
+  </extension>
+</addon>
