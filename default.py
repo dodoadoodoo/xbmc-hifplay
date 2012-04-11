@@ -21,7 +21,7 @@ __settings__ = xbmcaddon.Addon(id='plugin.video.hifplay')
 def list_programs():
     doc = unicode(urllib2.urlopen(ARCHIVE_URL).read(), encoding="utf-8", errors="ignore")
     strainer = SoupStrainer("div", "thumbnails")
-    soup = BeautifulSoup(doc, fromEncoding="utf-8", parseOnlyThese=strainer)
+    soup = BeautifulSoup(doc, fromEncoding="utf-8", parseOnlyThese=strainer, convertEntities=BeautifulSoup.HTML_ENTITIES)
     print "Original encoding: %s " % soup.originalEncoding
     print "doc: %s " % soup.prettify()
     programs = soup.findAll("div", "thumb")
